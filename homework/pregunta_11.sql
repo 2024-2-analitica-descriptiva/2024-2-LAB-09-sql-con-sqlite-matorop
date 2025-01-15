@@ -38,3 +38,9 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 -- 
+select 
+    --strftime('%Y', c14) as YEAR, 
+    count(*) as "COUNT(*)"
+from tbl1
+where strftime('%Y', c14) = '2018'
+group by strftime('%Y', c14)
